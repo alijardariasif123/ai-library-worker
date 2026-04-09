@@ -649,8 +649,11 @@ def ocr_image(file_path: str) -> Tuple[int, List[str]]:
         return 1, [""]
 
 
+# def is_pdf(file_path: str) -> bool:
+#     return file_path.lower().endswith('.pdf')
+
 def is_pdf(file_path: str) -> bool:
-    return file_path.lower().endswith('.pdf')
+    return file_path.lower().endswith('.pdf') or 'raw/upload' in file_path
 
 
 def is_image(file_path: str) -> bool:
